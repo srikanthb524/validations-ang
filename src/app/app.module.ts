@@ -4,11 +4,13 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactformsComponent } from './reactforms/reactforms.component';
+import { FormarrarynestedComponent } from './formarrarynested/formarrarynested.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactformsComponent
+    ReactformsComponent,
+    FormarrarynestedComponent
   ],
   imports: [
     BrowserModule,

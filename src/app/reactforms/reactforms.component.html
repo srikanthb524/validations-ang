@@ -1,16 +1,28 @@
-<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-  <label for="fname"> Enter First Name</label>
-  <input type="text" name="fname" formControlName="fname">
-<div *ngIf="!fname.valid">
-  <div [hidden]="!fname.errors.required">
-    First Name Required
-  </div>
-</div>
-  <div formGroupName="address">
-    <label for="city"> Enter City</label>
-  <input type="text" name="city" formControlName="city">
-  </div>
+<form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" formControlName="name" />
+  </p>
+
+    Skills:
+    <div formArrayName="skills">
+      <div *ngFor="let skill of skills.controls; let i=index">
+        <div [formGroupName]="i">
+          {{i}}
+          Skill Name:
+          <input type="text" formControlName="skill">
+          Experience:
+          <input type="text" formControlName="exp">
+          <button (click)="removeSkill(i)">Remove</button>
+      </div>
+    </div>
+    </div>
   <p>
     <button type="submit">Submit</button>
   </p>
+  <p>
+    <button type="button" (click)="addSkills()">Add</button>
+  </p>
 </form>
+
+{{this.skillsForm.value | json}}
