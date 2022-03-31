@@ -5,12 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactformsComponent } from './reactforms/reactforms.component';
 import { FormarrarynestedComponent } from './formarrarynested/formarrarynested.component';
+import { ServiceExampleComponent } from './service-example/service-example.component';
+import { ProductService } from './product.service';
+import { ValidReactComponent } from './valid-react/valid-react.component';
+import { CustValidReactComponent } from './cust-valid-react/cust-valid-react.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReactformsComponent,
-    FormarrarynestedComponent
+    FormarrarynestedComponent,
+    ServiceExampleComponent,
+    ValidReactComponent,
+    CustValidReactComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +25,7 @@ import { FormarrarynestedComponent } from './formarrarynested/formarrarynested.c
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
