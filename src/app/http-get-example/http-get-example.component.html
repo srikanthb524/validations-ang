@@ -1,0 +1,21 @@
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<table class="table table-striped" style="margin:5%">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">UserId</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let post of posts | paginate:{itemsPerPage:10,currentPage:p}">
+      <th scope="row">{{post.id}}</th>
+      <td>{{post.userId}}</td>
+      <td>{{post.title}}</td>
+      npm install -g json-server
+    </tr>
+  </tbody>
+
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
