@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { GetuserService } from '../getuser.service';
+import { GetuserService } from '../../service/getuser.service';
 //import { Users } from '../models/users';
 import { posts } from '../models/posts';
 import { NgxSpinnerService } from 'ngx-spinner';

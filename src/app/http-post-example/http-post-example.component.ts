@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Person } from '../models/person';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../service/api.service';
 
 @Component({
   selector: 'app-http-post-example',
